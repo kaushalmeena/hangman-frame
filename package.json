@@ -1,0 +1,37 @@
+{
+  "name": "hangman-frame",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "dev-server": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src/ --ext ts,tsx --max-warnings 0",
+    "ts-lint": "tsc --noEmit --incremental",
+    "lint:fix": "eslint src/ --ext ts,tsx --max-warnings 0 --fix",
+    "debugger": "npx @frames.js/debugger@latest"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "clsx": "^2.1.1",
+    "jsurl": "^0.1.5",
+    "next": "14.2.13",
+    "react": "^18",
+    "react-dom": "^18",
+    "satori": "^0.11.1",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/jsurl": "^0.1.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
