@@ -1,7 +1,6 @@
 {
   "name": "hangman-frame",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev --turbo",
     "dev-server": "next dev --turbo",
