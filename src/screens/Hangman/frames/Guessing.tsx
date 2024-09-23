@@ -86,7 +86,7 @@ function HangmanLetter({
     );
   }
   return (
-    <span key={letter} style={{ color: "#cb4335bf" }}>
+    <span key={letter} style={{ color: "#000000bf" }}>
       {guessed ? letter : "_"}
     </span>
   );
