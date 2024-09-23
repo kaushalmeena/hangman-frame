@@ -1,4 +1,4 @@
-import { FRAME_STATE_ENCRYPTION_KEY } from "@/constants/config";
+import { ENCRYPTION_KEY } from "@/constants/config";
 import { createCipheriv, createDecipheriv, randomBytes } from "node:crypto";
 import { fetchRandomWord } from "./fetchers";
 import { GameState, GameStatus } from "./types";
@@ -14,7 +14,7 @@ export const decodeGameState = (encodedState?: string) => {
 
     const decipher = createDecipheriv(
       "aes-256-cbc",
-      Buffer.from(FRAME_STATE_ENCRYPTION_KEY!),
+      Buffer.from(ENCRYPTION_KEY!),
       initialVector
     );
 
@@ -41,7 +41,7 @@ export const encodeGameState = (decodedState?: string | null) => {
 
     const encipher = createCipheriv(
       "aes-256-cbc",
-      Buffer.from(FRAME_STATE_ENCRYPTION_KEY!),
+      Buffer.from(ENCRYPTION_KEY!),
       initialVector
     );
 

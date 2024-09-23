@@ -1,9 +1,11 @@
-export const BASE_URL = process.env["BASE_URL"] || "http://localhost:3000";
+export const FRAME_BASE_URL =
+  process.env["FRAME_BASE_URL"] || "http://localhost:3000";
 
-export const FARCASTER_HUBS_ENDPOINT =
-  process.env["FARCASTER_HUBS_ENDPOINT"] || "http://localhost:3010/hub";
+export const HUBS_ENDPOINT =
+  process.env["HUBS_ENDPOINT"] || "http://localhost:3010/hub";
 
-export const FARCASTER_HUBS_API_KEY = process.env["FARCASTER_HUBS_API_KEY"];
+export const HUBS_API_KEY = process.env["HUBS_API_KEY"] || "";
 
-export const FRAME_STATE_ENCRYPTION_KEY =
-  process.env["FRAME_STATE_ENCRYPTION_KEY"];
+export const ENCRYPTION_KEY = (process.env["ENCRYPTION_KEY"] || "")
+  .slice(0, 32)
+  .padEnd(32, "0");

@@ -1,7 +1,4 @@
-import {
-  FARCASTER_HUBS_API_KEY,
-  FARCASTER_HUBS_ENDPOINT,
-} from "@/constants/config";
+import { HUBS_API_KEY, HUBS_ENDPOINT } from "@/constants/config";
 import JSURL from "jsurl";
 import { Frame, FrameActionPayload, ValidatedFrameMessage } from "./types";
 
@@ -10,17 +7,14 @@ export async function getFrameMessage(body: FrameActionPayload) {
     throw new Error("No body found for validating frame message");
   }
 
-  const response = await fetch(
-    `${FARCASTER_HUBS_ENDPOINT}/v1/validateMessage`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/octet-stream",
-        "x-api-key": FARCASTER_HUBS_API_KEY!,
-      },
-      body: Buffer.from(body.trustedData.messageBytes, "hex"),
-    }
-  );
+  const response = await fetch(`${HUBS_ENDPOINT}/v1/validateMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/octet-stream",
+      "x-api-key": HUBS_API_KEY!,
+    },
+    body: Buffer.from(body.trustedData.messageBytes, "hex"),
+  });
 
   const data = await response.json();
 
