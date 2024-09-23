@@ -1,10 +1,11 @@
 import { getRandomInteger } from "@/utils/numberUtils";
 import { createReadStream } from "node:fs";
+import { resolve } from "node:path";
 import { createInterface } from "node:readline";
 
 const TOTAL_WORD_COUNT = 1022;
 
-const WORDS_FILE_PATH = "./src/assets/words.txt";
+const WORDS_FILE_PATH = resolve("src", "assets", "words.txt");
 
 export const fetchRandomWord = async () => {
   const wordIndex = getRandomInteger(0, TOTAL_WORD_COUNT - 1);
