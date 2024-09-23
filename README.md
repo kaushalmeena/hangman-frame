@@ -2,7 +2,7 @@
 
 A Farcaster frame for classic game of Hangman.
 
-Live version is deployed at [https://hangman-frame.vercel.app/](https://hangman-frame.vercel.app/)
+Live version is deployed at [https://hangman-frame.vercel.app](https://hangman-frame.vercel.app)
 
 ## Getting Started
 
